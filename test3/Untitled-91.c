@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    int num, a, b, c;
+    printf("请输入一个三位正整数:");
+    scanf("%d", &num);
+    if (num < 100 || num > 999)
+        printf("不是三位正整数\n");
+    else
+    {
+        a = num / 100;
+        b = (num / 10) % 10;
+        c = num % 10;
+        if (a * a * a + b * b * b + c * c * c == num)
+            printf("%d是水仙花数\n", num);
+        else
+            printf("%d不是水仙花数\n", num);
+    }
+    return 0;
+}
